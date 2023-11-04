@@ -1,5 +1,4 @@
 void main() {
   var n = 98;
-  var text = 'Battery Street';
-  print('${n} ${text}\n');
+  print('${n} ${"Battery street"}\n');
 }
