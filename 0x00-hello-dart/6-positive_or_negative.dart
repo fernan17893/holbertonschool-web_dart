@@ -1,10 +1,10 @@
 void main(List<String> args) {
     var n = int.parse(args[0]);
     if (n == 0) {
-        print('is zero');
+        print('${n} is zero');
     } else if (n > 0) {
-        print('is positive');
+        print('${n} is positive');
     } else {
-        print('is negative');
+        print('${n} is negative');
     }
 }
