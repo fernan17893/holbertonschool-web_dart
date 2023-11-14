@@ -18,29 +18,16 @@ bool isPalindrome(String s) {
 }
 
 String longestPalindrome(String s) {
-    if (s == null || s.length == 0) {
-        return 'none';
+  if (s.length < 3) return 'none';
+  String longest = '';
+  String current = '';
+  for (int i = 0; i < s.length; i++) {
+    for (int j = i; j < s.length; j++) {
+      current = s.substring(i, j + 1);
+      if (isPalindrome(current) && current.length > longest.length) {
+        longest = current;
+      }
     }
-    if (s.length <= 2) {
-        return 'none';
-    }
-    int left = 0;
-    int right = s.length - 1;
-    String longest = "";
-    while (left < right) {
-        if (s[left] == s[right]) {
-            String sub = s.substring(left, right + 1);
-            if (isPalindrome(sub)) {
-                if (sub.length > longest.length) {
-                    longest = sub;
-                }
-            }
-        }
-        right--;
-        if (right == left) {
-            left++;
-            right = s.length - 1;
-        }
-    }
-    return longest;
+  }
+  return longest != '' ? longest : 'none';
 }
