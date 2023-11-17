@@ -11,6 +11,6 @@ class Password {
             password.contains(RegExp(r'[0-9]'));
 }
      toString() {
-        return "Your password is: ${this.password}";
+        return "Your Password is: ${this.password}";
      }
 }
