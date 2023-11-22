@@ -1,7 +1,7 @@
 class Password {
     String user_password = "";
 
-    Password({required String password}) : this.user_password = password;
+    Password({required String password}) : user_password = password;
 
     String get password => user_password;
 
