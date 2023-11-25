@@ -17,6 +17,6 @@ Future<double> calculateTotal() async {
         });
     });
     } catch (err) {
-        return 0.0;
+        return -1;
     }  
 }
