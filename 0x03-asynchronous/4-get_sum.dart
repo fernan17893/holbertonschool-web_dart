@@ -2,7 +2,7 @@ import '4-util.dart';
 import 'dart:convert';
 
 
-Future<double> calculateTotal() async {
+calculateTotal() async {
     try {
     return fetchUserData().then((data) {
         String id = json.decode(data)['id'];
